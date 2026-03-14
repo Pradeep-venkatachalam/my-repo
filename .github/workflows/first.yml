@@ -1,17 +1,11 @@
-name: First Workflow
+name: Demo Pipeline
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
-  test-job:
+  My-test-job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Run a test command
-        run: echo "Hello GitHub Actions!"
+      - name: message
+        run: echo "CI Pipeline Running"
