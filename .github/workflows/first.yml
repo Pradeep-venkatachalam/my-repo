@@ -1,8 +1,17 @@
-name: my first pipeline
-on: workflow_dispatch
+name: First Workflow
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-test-job:
-runs-on: ubuntu-latest
-steps:
-  -name:  echo"hello world"
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run a test command
+        run: echo "Hello GitHub Actions!"
