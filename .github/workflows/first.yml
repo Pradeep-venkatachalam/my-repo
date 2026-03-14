@@ -1,6 +1,6 @@
 name: Demo Pipeline
 
-on: push
+on: workflow_dispatch
 
 jobs:
   My-test-job:
